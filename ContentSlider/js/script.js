@@ -9,9 +9,8 @@ $(document).ready(function(){
 	$('#pause').addClass('activeButton');					//Pause button is activated by default
 	
 	showhide();
-	//When mouse enters slide, show active 
+	//When mouse enters slide, show active button
 	//When leaves, hide active button
-	//When pause is clicked, activate play button
 
 	tx=setInterval(function(){
 		if(autoswitch)
@@ -20,6 +19,7 @@ $(document).ready(function(){
 		}
 	},autoswitch_speed);
 
+	//play pause needs to be fast, hence placing it in a faster setInterval
 	setInterval(function(){
 		playpause();
 	},1);
