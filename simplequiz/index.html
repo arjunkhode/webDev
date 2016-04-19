@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta name="viewport" width="device-width" scale="1.0">
+		<meta name="author" content="Arjun Khode">
+		<meta name="date" content="04/16/2016">
+		<title>JS Quiz</title>
+		<link rel="stylesheet" href="css/style.css"/>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<hgroup>
+					<h1>Javascript Quiz!</h1>
+					<h3>Test your knowledge in <strong>javascript</strong></h3>
+				</hgrouup>
+			</header>
+			<section>
+				<form name="quizForm" onSubmit="return submitAnswers();">
+					<div id="results"></div>
+					<article>
+						<header>
+							<p>1. In which tag do we put in javascript code?</p>
+						</header>
+						<input type="radio" name="q1" id="q1a" value="a"> <label for="q1a"> a. &lt;script&gt; </label></input><br/>
+						<input type="radio" name="q1" id="q1b" value="b"><label for="q1b"> b. &lt;head&gt; </label></input><br/>
+						<input type="radio" name="q1" id="q1c" value="c"><label for="q1c"> c. &lt;body&gt; </label></input><br/>
+						<input type="radio" name="q1" id="q1d" value="d"><label for="q1d"> d. &lt;bdo&gt; </label></input><br/>
+						<input type="radio" name="q1" id="q1e" value="e"><label for="q1e"> e. &lt;em&gt; </label></input><br/><br/>
+					</article>
+					<article>	
+						<header>
+							<p>2. Events get executed first, then all the functions in the global execution context get executed: true or false?</p>
+						</header>
+						<input type="radio" name="q2" id="q2a" value="a"><label for="q2a"> a. true </label></input><br/>
+						<input type="radio" name="q2" id="q2b" value="b"><label for="q2b"> b. false </label></input><br/><br/>
+					</article>
+					<article>	
+						<header>
+							<p>3. If you set a function to the prototype, the function can be used for the original object: true or false?</p>
+						</header>
+						<input type="radio" name="q3" id="q3a" value="a"><label for="q3a"> a. true</label></input><br/>
+						<input type="radio" name="q3" id="q3b" value="b"><label for="q3b"> b. false</label></input><br/><br/>
+					</article>
+					<article>	
+						<header>
+							<p>4. What is the following method of defining a variable called?<br>
+							<pre>var amanda = new Person()</pre>
+							</p>
+						</header>
+						<input type="radio" name="q4" id="q4a" value="a"><label for="q4a"> a. Creating by prototype</label></input><br/>
+						<input type="radio" name="q4" id="q4b" value="b"><label for="q4b"> b. Creating by class</label></input><br/>
+						<input type="radio" name="q4" id="q4c" value="c"><label for="q4c"> c. Creating by id</label></input><br/>
+						<input type="radio" name="q4" id="q4d" value="d"><label for="q4d"> d. Creating by constructor</label></input><br/>
+						<input type="radio" name="q4" id="q4e" value="e"><label for="q4e"> e. None of the above</label></input><br/><br/>
+					</article>
+
+					<article>
+						<header>
+							<p>5. What value will the following code print?<br>
+								<pre>function a()
+	{   var i=5;
+		b();
+	}
+	function b()
+	{
+		console.log(i);
+	}
+	var i=7;
+	a();
+								</pre>
+							</p>
+						</header>
+						<input type="radio" name="q5" id="q5a" value="a"><label for="q5a"> a. Undefined</label></input><br/>
+						<input type="radio" name="q5" id="q5b" value="b"><label for="q5b"> b. 5</label></input><br/>
+						<input type="radio" name="q5" id="q5c" value="c"><label for="q5c"> c. 7</label></input><br/>
+						<input type="radio" name="q5" id="q5d" value="d"><label for="q5d"> d. Garbage value</label></input><br/>
+						<input type="radio" name="q5" id="q5e" value="e"><label for="q5e"> e. Null</label></input><br/><br/>
+					</article>
+					<input type="submit" value="Submit Answers!" id="submit"></input>	
+				</form>
+			</section>
+			<footer>
+				Copyright &copy; 2016, Arjun Khode
+			</footer>
+		</div>
+	</body>
+</html>

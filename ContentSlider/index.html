@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta name="viewport" width="device-width" scale="1.0">
+		<title>JS Content Slider</title>
+		<meta name="author" content="Arjun Khode">
+		<meta name="date" content="04/17/2016">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script src="js/script.js"></script>
+		<link rel="stylesheet" href="css/style.css">
+		<script>
+
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<h1>Javascript Trivia</h1>
+			</header>
+			<section>
+				<img src="img/pause.png" alt="pause" id="pause">
+				<img src="img/play.png" alt="play" id="play">
+				<img src="img/arrow-left.png" alt="Previous" id="prev">
+				<div id="slider">
+					<div class="slide">
+						<div class="sliderText">
+							<h2>Hark! Stay alert</h2>
+							<p>The JavaScript standard library lacks an official standard text output function. However, given that JavaScript is mainly used for client-side scripting within modern Web browsers, and that almost all Web browsers provide the alert function, alert is used in the examples.</p>
+						</div>
+						<img src="img/slide1.jpg" alt="Slide 1">
+					</div>
+
+
+					<div class="slide">
+						<div class="sliderText">
+							<h2>Dark origins</h2>
+							<p>Brendan Eich summarized the ancestry of the syntax in the first paragraph of the JavaScript 1.1 specification[1] as follows:
+								<q>
+							JavaScript borrows most of its syntax from Java, but also inherits from Awk and Perl, with some indirect influence from Self in its object prototype system.</q></p>
+						</div>
+						<img src="img/slide2.jpg" alt="Slide 2">
+					</div>
+
+
+					<div class="slide">
+						<div class="sliderText">
+							<h2>Case sensitivity</h2>
+							<p>JavaScript is case sensitive. It is common to start the name of a constructor with a capitalised letter, and the name of a function or variable with a lower-case letter.</p>
+						</div>
+						<img src="img/slide3.jpg" alt="Slide 3">
+					</div>
+
+					<div class="slide">
+						<div class="sliderText">
+							<h2>Whitespaces and semi-colons</h2>
+							<p>Spaces, tabs and newlines used outside of string constants are called whitespace. Unlike C, whitespace in JavaScript source can directly impact semantics. Because of a technique called "automatic semicolon insertion" (ASI), some statements that are well formed when a newline is parsed will be considered complete (as if a semicolon were inserted just prior to the newline). Some authorities advise supplying statement-terminating semicolons explicitly, because it may lessen unintended effects of the automatic semicolon insertion</p>
+						</div>
+						<img src="img/slide4.jpg" alt="Slide 4">
+					
+					</div>
+					<div class="slide">
+						<div class="sliderText">
+							<h2>Hoisting</h2>
+							<p>JavaScript Initializations are Not Hoisted. If you assign a value to a variable before it is used, it works fine, but if you declare a variable but assign it a value after using it, its value will still be undefined. Declare Your Variables At the Top! Variables are lexically scoped at function level (not block level as in C), and this does not depend on order (forward declaration is not necessary): if a variable is declared inside a function (at any point, in any block), then inside the function, the name will resolve to that variable. This is equivalent in block scoping to variables being forward declared at the top of the function, and is referred to as hoisting.</p>
+						</div>
+						<img src="img/slide5.jpg" alt="Slide 5">
+					</div>
+				</div>
+				<img src="img/arrow-right.png" alt="Next" id="next">
+			</section>
+		</div>
+	</body>
+</html>

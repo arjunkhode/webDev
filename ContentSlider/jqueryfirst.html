@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Jquery first</title>
+		<meta name="viewport" width="device-width" scale="1.0">
+		<meta name="author" content="Arjun Khode">
+		<meta name="date" content="04/17/2016">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<style>
+			.red{color:red;}
+			.green{color:green;}
+		</style>
+		<script>
+			$(document).ready(function(){
+				$('.mylink').mousedown(function(){
+					timeout=setInterval(function(){
+					$('h1').text("I am clicked");	
+					},5);
+					
+				}).mouseup(function() {
+    				clearInterval(timeout);
+    				$('h1').text("I am NOT clicked");	
+					
+    			});
+
+
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Welcome to my first jquery program</h1>
+		<input type="button" class="mylink" value = "click me">
+	</body>
+</html>
