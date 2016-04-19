@@ -14,13 +14,17 @@ $(document).ready(function(){
 	//When pause is clicked, activate play button
 
 	tx=setInterval(function(){
-		playpause();
 		if(autoswitch)
 		{
 			nextSlide();
 		}
 	},autoswitch_speed);
 
+	setInterval(function(){
+		playpause();
+	},1);
+
+//function to switch between play button and pause button on click
 function playpause(){
 		if($('#pause').hasClass('activeButton'))
 		{
