@@ -12,6 +12,7 @@ background-color: #111;
 a
 {
 text-decoration: none;
+color: white;
 }
 
 #wrap,#overcontainer
@@ -60,4 +61,29 @@ text-decoration: none;
 	
 }
 
+/*********/
 
+.clearFloat
+{
+	clear:both;
+}
+
+header
+{
+	padding:30px 20px;
+}
+
+header h1
+{
+	margin-bottom: 5px;
+}
+
+section
+{
+	padding:30px 20px 20px 20px;
+}
+
+footer
+{
+	padding:20px;
+}
