@@ -1,0 +1,63 @@
+*
+{
+	margin:0;
+	padding:0;
+}
+
+body
+{
+background-color: #111;
+}
+
+a
+{
+text-decoration: none;
+}
+
+#wrap,#overcontainer
+{
+
+	background-image: url("../img/wdf.jpg");
+	background-size: 1080px auto;
+	background-repeat: no-repeat;
+}
+
+#container
+{
+	position: relative;
+}
+
+#wrap
+{
+	background-position: center top;
+	padding: 10px 190px ;
+}
+
+#overcontainer
+{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 99;
+
+	background-position: center -10px;
+
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+
+#content
+{
+	position: relative;
+	z-index: 100;
+	padding: 20px;
+	background: rgb(34,34,34); /* for IE */
+	background: rgba(34,34,34,0.75);
+	text-align: center;
+	color: white;
+	
+}
+
+
