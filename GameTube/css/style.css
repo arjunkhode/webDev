@@ -70,7 +70,7 @@ color: white;
 
 header
 {
-	padding:30px 20px;
+	padding:20px 20px;
 }
 
 header h1
@@ -80,7 +80,7 @@ header h1
 
 section
 {
-	padding:30px 20px 20px 20px;
+	padding:10px 20px 20px 20px;
 }
 
 footer
@@ -117,9 +117,11 @@ filter:alpha(opacity="90");
 .fieldbox #searchbox
 {
 	box-sizing:border-box;
-	display: inline-block;
+	-webkit-box-flex:1;
+	display:inline -webkit-box;
 	padding:7px;
 	width: 45%;
+	max-width: 500px;
 	border:4px solid #ccc;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
