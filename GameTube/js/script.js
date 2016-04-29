@@ -4,8 +4,8 @@ $(document).ready(function(){
 
 	$(searchbox).on('focus',function(){
 		$(searchbox).animate({
-			width:'500px'
-		},800,'linear');
+			width:'90%'
+		},400,'linear');
 		
 	});
 });
