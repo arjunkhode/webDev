@@ -87,3 +87,41 @@ footer
 {
 	padding:20px;
 }
+
+#searchForm
+{
+	margin-bottom: 15px;
+	display: block;
+}
+
+#searchButton
+{
+	position: relative;
+	top:11px;
+	width: 32px;
+	height: 32px;
+	border:0;
+	cursor: pointer;
+	opacity: 0.65;
+	filter:alpha(opacity="65");
+	margin-left: 5px;
+	background: transparent url("../img/search.png");
+}
+
+#searchButton:hover
+{
+opacity: 0.90;
+filter:alpha(opacity="90");
+}
+
+.fieldbox #searchbox
+{
+	box-sizing:border-box;
+	display: inline-block;
+	padding:7px;
+	width: 45%;
+	border:4px solid #ccc;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
