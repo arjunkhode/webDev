@@ -34,9 +34,17 @@ body
 	display:block;
 	padding:3px;
 	position: relative;
-	margin:0 auto;
 }
 
+#outsideSlider
+{
+	overflow: hidden;
+	width: 955px;
+	height: 365px;
+	display:block;
+	position: relative;
+	margin:0 auto;
+}
 #play,#pause
 {
 	height:auto;
@@ -47,20 +55,24 @@ body
 #play
 {
 	width: 55px;
-	height: auto;
+	height: 55px;
 	position: absolute;
-	bottom:342.5px;
-	left:482.5px;
+	top:50%;
+	left:50%;
+	display: block;
+	transform:translate(-50%,-50%);
 
 }
 
 #pause
 {
 	width: 60px;
-	height: auto;
+	height: 60px;
 	position: absolute;
-	bottom:340px;
-	left:480px;
+	top:50%;
+	left:50%;
+	display: block;
+	transform:translate(-50%,-50%);
 
 }
 #next,#prev
@@ -74,7 +86,7 @@ cursor:pointer;
 #prev
 {
 	position: relative;
-	left: 13px;
+	left: 10px;
 	top: 215px;
 }
 
@@ -90,6 +102,7 @@ cursor:pointer;
 	left: 0;
 	padding:20px;
 	background:rgba(0,0,0,0.5);
+	z-index: 2;
 }
 
 #next

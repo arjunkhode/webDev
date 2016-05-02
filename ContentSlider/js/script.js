@@ -1,5 +1,4 @@
 $(document).ready(function(){
-
 	var speed=500;				//Speed for transition like fade in and fade out
 	var autoswitch=true;		//Flag that indicates automatic slideshow being on or off
 	var autoswitch_speed=8000;	//Transition time for next slide to automatically come in
