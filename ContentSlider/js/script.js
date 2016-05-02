@@ -28,7 +28,7 @@ function playpause(){
 		if($('#pause').hasClass('activeButton'))
 		{
 			$('#slider,#play,#pause').click(function(){
-				$('#pause.activeButton').removeClass('activeButton');
+				$('#pause').removeClass('activeButton');
 				$('#play').addClass('activeButton');
 				$('#pause').hide();
 				$('#play').show();
@@ -39,7 +39,7 @@ function playpause(){
 	else if($('#play').hasClass('activeButton'))
 		{
 			$('#slider,#play,#pause').click(function(){
-				$('#play.activeButton').removeClass('activeButton');
+				$('#play').removeClass('activeButton');
 				$('#pause').addClass('activeButton');
 				$('#play').hide();
 				$('#pause').show();
