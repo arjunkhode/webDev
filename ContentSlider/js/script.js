@@ -53,10 +53,27 @@ function playpause(){
 	$('.slide').hide();										//hide anything that is there inside slide class
 	$('.active').show();									//Show only the active class
 
-	$('#next').click(nextSlide);							//Call to the function nextSlide when #next button is clicked
+	$('#next').click(function(){						    //Call to the function nextSlide when #next button is clicked							
+		nextSlide();
+		clearInterval(tx);
+		tx=setInterval(function(){
+			if(autoswitch)
+			{
+				nextSlide();
+			}
+		},autoswitch_speed);
+	});	
 
-
-	$('#prev').click(prevSlide);							//nextSlide and prevSlide are defined within document.ready and not outside
+	$('#prev').click(function(){
+		prevSlide();
+		clearInterval(tx);
+		tx=setInterval(function(){
+			if(autoswitch)
+			{
+				nextSlide();
+			}
+		},autoswitch_speed);	
+	});							
 
 	//Function to move to next slide
 	function nextSlide()
@@ -95,8 +112,8 @@ function playpause(){
 	function showhide()
 	{
 		$('.slide,#play,#pause').mouseenter(function(){
-			tt=setInterval(function(){
-			$('.activeButton').show();	
+			$('.activeButton').show();
+			tt=setInterval(function(){	
 			},1);
 		}).mouseleave(function(){
 			clearInterval(tt);
