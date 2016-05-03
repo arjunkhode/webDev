@@ -113,10 +113,7 @@ function playpause(){
 	{
 		$('.slide,#play,#pause').mouseenter(function(){
 			$('.activeButton').show();
-			tt=setInterval(function(){	
-			},1);
 		}).mouseleave(function(){
-			clearInterval(tt);
 			$('.activeButton').hide();
 		});
 	}
