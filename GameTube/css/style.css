@@ -18,9 +18,9 @@ color: white;
 #wrap,#overcontainer
 {
 
-	background-image: url("../img/wdf.jpg");
-	background-size: 1080px auto;
-	background-repeat: no-repeat;
+	background-image: url("../img/brick.jpg");
+	background-size: 2000px auto;
+	background-repeat: repeat-y;
 }
 
 #container
@@ -58,7 +58,13 @@ color: white;
 	background: rgba(34,34,34,0.75);
 	text-align: center;
 	color: white;
+	border-radius: 5px;
 	
+}
+
+.fancybox
+{
+	z-index: 101;
 }
 
 /*********/
@@ -86,6 +92,8 @@ section
 footer
 {
 	padding:20px;
+	display: block;
+	text-align: center;
 }
 
 #searchForm
@@ -110,8 +118,14 @@ footer
 
 #searchButton:hover
 {
-opacity: 0.90;
-filter:alpha(opacity="90");
+	opacity: 0.90;
+	filter:alpha(opacity="90");
+}
+
+#searchButton:active
+{
+	opacity: 0.75;
+	filter:alpha(opacity="65");
 }
 
 .fieldbox #searchbox
@@ -123,10 +137,100 @@ filter:alpha(opacity="90");
 	display:inline-block -moz-box;
 	padding:7px;
 	float: left;
-	width: 40%;
+	width: 90%;
 	
 	border:4px solid #ccc;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border-radius: 2px;
+}
+
+#searchbox:active
+{
+	background-color: white;
+}
+
+#searchbox:-webkit-autofill
+{
+	-webkit-box-shadow:0 0 0px 1000px white inset;
+}
+
+/***********/
+
+#results
+{
+	list-style: none;
+}
+
+#results li
+{
+	padding:10px 0;
+	border-bottom: 1px #000 dotted;
+	overflow: auto;
+	font-family: 'helvetica','sans-serif';
+}
+
+#results li p
+{
+	font-size: 0.80em;
+}
+
+#results li h4
+{
+	font-weight: normal;
+}
+
+#results li:first-of-type
+{
+	margin-top: 20px;
+}
+
+.list-left
+{
+	float: left;
+	width: 20%;
+}
+
+.list-left img
+{
+	width:100%;
+	padding:3px;
+	border:1px black solid;
+}
+
+.list-right
+{
+	float: right;
+	width: 78%;
+	text-align: left;
+}
+
+.cTitle
+{
+	font-size: 0.80em;
+	color: #EF5350;
+}
+
+footer
+{
+	font-size: 0.80em;
+}
+
+
+/************/
+
+.button-container
+{
+	margin-top: 15px;
+}
+
+.paging-button
+{
+	background-color: #f4f4f4;
+	padding:8px 13px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	color:#333;
+	cursor:pointer;
+	margin:10px;
 }
