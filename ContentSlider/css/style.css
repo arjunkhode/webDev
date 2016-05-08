@@ -103,6 +103,7 @@ cursor:pointer;
 	padding:20px;
 	background:rgba(0,0,0,0.5);
 	z-index: 2;
+	font-family: 'helvetica';
 }
 
 #next
@@ -110,6 +111,11 @@ cursor:pointer;
 	position: relative;
 	left:930px;
 	top:-200px;
+}
+
+h2
+{
+	padding-bottom: 5px;
 }
 
 h1

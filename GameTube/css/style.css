@@ -7,6 +7,7 @@
 body
 {
 background-color: #111;
+font-family: serif;
 }
 
 a
@@ -71,7 +72,7 @@ color: white;
 @font-face
 {
 	font-family:"borg";
-	src:url('font/Borg.ttf');
+	src:url('../font/Borg.ttf');
 }
 
 /*********/
@@ -90,6 +91,7 @@ header h1
 {
 	margin-bottom: 5px;
 	font-family: borg,sans-serif;
+	font-size: 30px;
 }
 
 section
