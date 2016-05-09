@@ -13,7 +13,7 @@ font-family: serif;
 a
 {
 text-decoration: none;
-color: white;
+color: #ddd;
 }
 
 #wrap,#overcontainer
@@ -59,7 +59,7 @@ color: white;
 	background: rgb(34,34,34); /* for IE */
 	background: rgba(34,34,34,0.75);
 	text-align: center;
-	color: white;
+	color: #eee;
 	border-radius: 5px;
 	box-shadow: 2px 2px 5px 0 black;		
 }
@@ -167,17 +167,18 @@ footer
 
 /***********/
 
-#results
-{
-	list-style: none;
-}
-
 #results li
 {
-	padding:10px 0;
+	padding:10px 5px;
 	border-bottom: 1px #000 dotted;
 	overflow: auto;
 	font-family: 'helvetica','sans-serif';
+}
+
+#results ul
+{
+	list-style: none;
+	padding-left:50px;
 }
 
 #results li p
@@ -195,6 +196,11 @@ footer
 	margin-top: 20px;
 }
 
+.fieldbox
+{
+	padding-left: 5px;
+}
+
 .list-left
 {
 	float: left;
@@ -204,8 +210,8 @@ footer
 .list-left img
 {
 	width:100%;
-	padding:3px;
-	border:1px black solid;
+	box-shadow: 0 0 5px 0 black;
+	box-sizing: border-box;
 }
 
 .list-right
@@ -213,6 +219,11 @@ footer
 	float: right;
 	width: 78%;
 	text-align: left;
+}
+
+.list-right p
+{
+	color:#ddd;
 }
 
 .cTitle
