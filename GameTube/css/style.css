@@ -167,6 +167,7 @@ footer
 
 /***********/
 
+/*added padding to the thumbnails to display shadow on left side too*/
 #results li
 {
 	padding:10px 5px;
@@ -196,6 +197,7 @@ footer
 	margin-top: 20px;
 }
 
+/*added padding to field box to align with thumbnails which also have padding to be able to show shadow on left side*/
 .fieldbox
 {
 	padding-left: 5px;

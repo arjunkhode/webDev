@@ -10,10 +10,11 @@ $(document).ready(function(){
 			.siblings('li.a')
 			.slideUp();
 		//Get image for active question
-		var img=$(this).children('img');
-		//Remove 'rotate' class for all except active
-		$('img').not(img).removeClass('rotate');
+		var img1=$(this).children('img');
+		//Remove 'rotate' class for all except active. 
+		//So every image 'img' but not this current image img1
+		$('img').not(img1).removeClass('rotate');
 		//Toggle rotate class
-		img.toggleClass('rotate');
+		img1.toggleClass('rotate');
 	});
 });

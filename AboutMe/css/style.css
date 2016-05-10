@@ -66,6 +66,17 @@ a{
 	cursor: pointer;
 }
 
+.qa li.q:first-of-type
+{
+	background-color: #999;
+	color: white;
+}
+
+.qa li.q:first-of-type img
+{
+	filter:contrast(1.25);
+}
+
 .qa li.a
 {
 	background-color: #ddd;
