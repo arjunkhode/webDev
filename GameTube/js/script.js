@@ -3,22 +3,31 @@ $(document).ready(function(){
 	var searchButton=$('#searchButton');
 	//Select searchbox on load
 	searchbox.focus();
-
+	//Lower class means 200 px padding top
+	
 	$(searchbox).on('input',function() {
     	$('#wrap').animate({
-    	  paddingTop: "-=20px",
+    	  paddingTop: "-=180px",
     	}, {
-        speed: "100",
+        speed: "1200",
         step: function(paddingTop) {
             	console.log(paddingTop);
             	if(paddingTop<=20)
             		{
             			$(this).stop();
-            		}
+            		}	
+            	//if($('#wrap').hasClass(''))
         		},
         easing: "swing"
         });
+        if($(searchbox).val()=='' && $('#buttons').is(':empty'))
+        {
+	        $('#wrap').animate({
+	    	  paddingTop: "+=180px",
+	    	},{speed:"1200",easing:"swing"});
+        }
   	});
+
 
 	$(searchbox).on('focus',function(){
 		$(searchbox).animate({

@@ -83,6 +83,7 @@ color: #ddd;
 	clear:both;
 }
 
+
 header
 {
 	padding:20px 20px;
@@ -92,7 +93,7 @@ header h1
 {
 	margin-bottom: 5px;
 	font-family: borg,sans-serif;
-	font-size: 30px;
+	font-size: 40px;
 }
 
 section
@@ -257,4 +258,9 @@ footer
 	color:#333;
 	cursor:pointer;
 	margin:10px;
+}
+
+.upper
+{
+	padding-top: 20px;
 }
