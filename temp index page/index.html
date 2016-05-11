@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="author" content="Arjun Khode"/>
+		<title>The sagittarius me</title>
+		<style>
+
+			body,#over
+			{
+			background-image:url("wdf.jpg");
+			  background-size: 2000px auto;
+			}
+
+			#container
+			{
+			  position:relative;
+			  margin-top:10%;
+			}
+
+			#over
+			{
+			  position:absolute;
+			  left:0;
+			  top:0;
+			  bottom:0;
+			  right:0;
+			  z-index:2;
+			  background-position: center -10px;
+			  
+			}
+
+
+			#content
+			{
+				position: relative;
+				font-family:'borg';
+				font-size:50px;
+				z-index: 100;
+				padding: 20px;
+				background: rgb(34,34,34); /* for IE */
+				background: rgba(34,34,34,0.75);
+				text-align: center;
+				color: #eee;
+				border-radius: 5px;
+				box-shadow: 2px 2px 5px 0 black;
+				text-align:center;
+				text-transform:uppercase;	
+			}
+
+
+			@font-face
+			{
+				font-family:'borg';
+				src:url("Borg.ttf");
+			}
+
+		</style>
+		<body>
+			<div id="container">
+			  <div id="over"></div>
+			   <div id="content">
+			   		<h1>Welcome! This site is under construction. Check it out again soon..</h1>
+			    </div>
+			  </div>
+			</div>
+		</body>
+</html>

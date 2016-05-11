@@ -4,6 +4,22 @@ $(document).ready(function(){
 	//Select searchbox on load
 	searchbox.focus();
 
+	$(searchbox).on('input',function() {
+    	$('#wrap').animate({
+    	  paddingTop: "-=20px",
+    	}, {
+        speed: "100",
+        step: function(paddingTop) {
+            	console.log(paddingTop);
+            	if(paddingTop<=20)
+            		{
+            			$(this).stop();
+            		}
+        		},
+        easing: "swing"
+        });
+  	});
+
 	$(searchbox).on('focus',function(){
 		$(searchbox).animate({
 			width:'90%'

@@ -32,8 +32,9 @@ color: #ddd;
 #wrap
 {
 	background-position: center top;
-	padding: 10px 190px ;
-	height:1000px;
+	box-sizing:border-box;
+	padding: 200px 190px ;
+	height:1080px;
 }
 
 #overcontainer
