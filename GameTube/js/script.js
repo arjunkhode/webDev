@@ -11,7 +11,7 @@ $(document).ready(function(){
     	}, {
         speed: "1200",
         step: function(paddingTop) {
-            	console.log(paddingTop);
+            	//console.log(paddingTop);
             	if(paddingTop<=20)
             		{
             			$(this).stop();
@@ -56,30 +56,36 @@ function search()
 	//Clear the results
 	$('#results').html('');
 	$('#buttons').html('');
-
 	//Get form input
-	q=$('#searchbox').val();	
+	query=$('#searchbox').val();	
 
-	//Run get request on api
-	$.get("https://www.googleapis.com/youtube/v3/search",
-		{part:'snippet,id', q:q, type:'video', key:'AIzaSyARJaiiUpn8_tHaVeD-3mXfWPcUScN4IJg'},
-		function(data){
+	//Run ajax request on api
+	$.ajax({
+		url:"https://www.googleapis.com/youtube/v3/search",
+		type:'GET',
+		data:{part:'snippet,id', q:query, type:'video', key:'AIzaSyARJaiiUpn8_tHaVeD-3mXfWPcUScN4IJg'},
+		success: function(data)
+		{
+	
 			var nextPageToken = data.nextPageToken;
 			var prevPageToken = data.prevPageToken;
-			console.log(data);
-			$.each(data.items,function(i,item)
-			{
+
+			console.log("next page token is "+nextPageToken);
+
+			$.each(data.items,function(i,item){
+
 				var op=getOutput(item);
-				//console.log('hey its op:',op);
 				//Display results
+
 				$('#results').append(op);
+
 			});
 
 			var buttons = getButtons(prevPageToken,nextPageToken);
 			//Display buttons
 			$('#buttons').append(buttons);
 		}
-	);	
+	});
 }
 
 //Build the Output
@@ -117,15 +123,15 @@ function getButtons(prevPageToken,nextPageToken)
 	if(!prevPageToken)
 	{
 		var btnout='<div class="button-container">'+
-		'<button id="next-button" class="paging-button" data-token="'+nextPageToken+'" data-query="'+q+'"'+
+		'<button id="next-button" class="paging-button" data-token="'+nextPageToken+'" data-query="'+query+'"'+
 		'onclick="nextpage();">Next Page</button></div>';
 	}
 	else
 	{
 		var btnout='<div class="button-container">'+
-		'<button id="prev-button" class="paging-button" data-token="'+prevPageToken+'" data-query="'+q+'"'+
+		'<button id="prev-button" class="paging-button" data-token="'+prevPageToken+'" data-query="'+query+'"'+
 		'onclick="prevpage();">Prev Page</button>'+
-		'<button id="next-button" class="paging-button" data-token="'+nextPageToken+'" data-query="'+q+'"'+
+		'<button id="next-button" class="paging-button" data-token="'+nextPageToken+'" data-query="'+query+'"'+
 		'onclick="nextpage();">Next Page</button></div>';
 	}
 
@@ -141,20 +147,25 @@ function nextpage()
 	$('#buttons').html('');
 
 	//Get form input
-	q=$('#searchbox').val();	
+	query=$('#searchbox').val();	
 
 	//Run get request on api
-	$.get("https://www.googleapis.com/youtube/v3/search",
-		{part:'snippet,id', q:q, pageToken:token, type:'video', key:'AIzaSyARJaiiUpn8_tHaVeD-3mXfWPcUScN4IJg'},
-		function(data){
+	$.ajax({
+		url:"https://www.googleapis.com/youtube/v3/search",
+		type:'GET',
+		data:{part:'snippet,id', pageToken:token, q:query, type:'video', key:'AIzaSyARJaiiUpn8_tHaVeD-3mXfWPcUScN4IJg'},
+		success: function(data)
+		{
+	
 			var nextPageToken = data.nextPageToken;
 			var prevPageToken = data.prevPageToken;
 			console.log(data);
-			$.each(data.items,function(i,item)
-			{
+
+			$.each(data.items,function(i,item){
+
 				var op=getOutput(item);
-				//console.log('hey its op:',op);
 				//Display results
+
 				$('#results').append(op);
 			});
 
@@ -162,7 +173,7 @@ function nextpage()
 			//Display buttons
 			$('#buttons').append(buttons);
 		}
-	);	
+	});
 }
 
 function prevpage()
@@ -174,20 +185,25 @@ function prevpage()
 	$('#buttons').html('');
 
 	//Get form input
-	q=$('#searchbox').val();	
+	query=$('#searchbox').val();	
 
 	//Run get request on api
-	$.get("https://www.googleapis.com/youtube/v3/search",
-		{part:'snippet,id', q:q, pageToken:token, type:'video', key:'AIzaSyARJaiiUpn8_tHaVeD-3mXfWPcUScN4IJg'},
-		function(data){
+	$.ajax({
+		url:"https://www.googleapis.com/youtube/v3/search",
+		type:'GET',
+		data:{part:'snippet,id', pageToken:token, q:query, type:'video', key:'AIzaSyARJaiiUpn8_tHaVeD-3mXfWPcUScN4IJg'},
+		success: function(data)
+		{
+	
 			var nextPageToken = data.nextPageToken;
 			var prevPageToken = data.prevPageToken;
 			console.log(data);
-			$.each(data.items,function(i,item)
-			{
+
+			$.each(data.items,function(i,item){
+
 				var op=getOutput(item);
-				//console.log('hey its op:',op);
 				//Display results
+
 				$('#results').append(op);
 			});
 
@@ -195,5 +211,5 @@ function prevpage()
 			//Display buttons
 			$('#buttons').append(buttons);
 		}
-	);	
+	});
 }

@@ -33,7 +33,7 @@ color: #ddd;
 {
 	background-position: center top;
 	box-sizing:border-box;
-	padding: 200px 190px ;
+	padding: 200px 100px ;
 	height:1080px;
 }
 
@@ -239,8 +239,13 @@ footer
 footer
 {
 	font-size: 0.80em;
+	font-family: 'tahoma',sans-serif;
 }
 
+header p
+{
+	font-family: 'tahoma',sans-serif;
+}
 
 /************/
 
@@ -260,7 +265,3 @@ footer
 	margin:10px;
 }
 
-.upper
-{
-	padding-top: 20px;
-}
