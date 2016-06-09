@@ -66,7 +66,7 @@ a{
 	cursor: pointer;
 }
 
-.qa li.q:first-of-type
+.qa li.q::last-of-type
 {
 	background-color: #999;
 	color: white;

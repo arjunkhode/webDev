@@ -9,7 +9,7 @@ $(document).ready(function(){
     	$('#wrap').animate({
     	  paddingTop: "-=180px",
     	}, {
-        speed: "1200",
+        speed: "600",
         step: function(paddingTop) {
             	//console.log(paddingTop);
             	if(paddingTop<=20)
@@ -24,7 +24,7 @@ $(document).ready(function(){
         {
 	        $('#wrap').animate({
 	    	  paddingTop: "+=180px",
-	    	},{speed:"1200",easing:"swing"});
+	    	},{speed:"600",easing:"swing"});
         }
   	});
 
