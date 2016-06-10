@@ -19,10 +19,15 @@ body
 
 #background_drawing
 {
-	background: url(img/19.jpg) repeat-x;
+	background: url(img/19.jpg);
+	background-repeat: repeat;
 	background-size: 500px;
 	height:100vh;
 	width:100vw;
+	@media only screen and (min-device-width: 481px) and (max-device-width: 1024px){
+		height: 1024px;
+		width:481px;
+	}
 }
 
 #content_wrapper
@@ -31,7 +36,23 @@ body
 	height:500px;
 	background:rgba(0,0,0,0.5);
 	margin: 0px auto;
-	@media only screen and (min-width: 400px) and (max-width: 600px){
+	@media only screen and (max-device-width: 400px){
+		width: 318px;
+		box-sizing:border-box;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+	}
+	@media only screen and (min-device-width: 481px) and (max-device-width: 1024px){
+		width: 481px;
+		height: 1024px;
+		box-sizing:border-box;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		
+	}
+	@media only screen and (min-width: 401px) and (max-width: 600px){
 		width: 400px;
 		box-sizing:border-box;
 		top:50%;
@@ -66,12 +87,22 @@ body
 	height:500px;
 	float: left;
 	display: block;
-	@media only screen and (min-width: 400px) and (max-width: 600px){
+	@media only screen and (max-device-width: 400px){
+		margin-left: 2px;
+		padding: 0;
+		width:20px;
+	}
+	@media only screen and (min-device-width: 481px) and (max-device-width: 1024px){
 		margin-left: 2px;
 		padding: 0;
 		width:65px;
 	}
-	@media only screen and (max-width: 700px){
+	@media only screen and (min-width: 401px) and (max-width: 600px){
+		margin-left: 2px;
+		padding: 0;
+		width:65px;
+	}
+	@media only screen and (min-width: 601px) and (max-width: 700px){
 		margin-left: 5px;
 		padding: 0;
 		width:65px;
@@ -84,7 +115,15 @@ body
 	margin-left: 15px;
 	border:1px solid #eee;
 	width:250px;
-	@media only screen and (min-width: 400px) and (max-width: 700px){
+	@media only screen and (max-device-width: 400px){
+		width:18px;
+		margin-left: 0;
+	}
+	@media only screen and (min-device-width: 481px) and (max-device-width: 1024px){
+		width:50px;
+		margin-left: 0;
+	}
+	@media only screen and (min-width: 401px) and (max-width: 700px){
 		width:50px;
 		margin-left: 0;
 	}
@@ -106,7 +145,19 @@ body
 	outline: none;
 	background: rgba(200,200,200,0.6);
 	height:200px;
-	@media only screen and (min-width: 400px) and (max-width: 700px){
+	@media only screen and (max-device-width: 400px){
+		width:15px;
+		margin-left: 0;
+		left:50%;
+		transform:translate(-50%,0);
+	}
+	@media only screen and (min-device-width: 481px) and (max-device-width: 1024px){
+		width:35px;
+		margin-left: 1px;
+		left:50%;
+		transform:translate(-50%,0);
+	}
+	@media only screen and (min-width: 401px) and (max-width: 700px){
 		width:35px;
 		margin-left: 1px;
 		left:50%;
@@ -138,7 +189,20 @@ body
 	outline: none;
 	background: rgba(200,200,200,0.6);
 	height:200px;
-	@media only screen and (min-width: 400px) and (max-width: 700px){
+	@media only screen and (max-device-width: 400px){
+		width:15px;
+		margin-left: 1px;
+		left:50%;
+		transform:translate(-50%,0);
+
+	}
+	@media only screen and (min-device-width: 481px) and (max-device-width: 1024px){
+		width:35px;
+		margin-left: 1px;
+		left:50%;
+		transform:translate(-50%,0);
+	}
+	@media only screen and (min-width: 401px) and (max-width: 700px){
 		width:35px;
 		margin-left: 1px;
 		left:50%;
@@ -171,11 +235,11 @@ body
 
 #container
 {
-	float: left;
 	display: block;
+	float: left;
 	position: absolute;
 	right: 0;
-	background: rgba(0,0,0,0.5);
+	background-color: #222;
 	height:500px;
 	width:500px;
 	box-sizing:border-box;
@@ -183,7 +247,16 @@ body
 	border-bottom-right-radius: 5px;
 	margin-left: 20px;
 	
-	@media only screen and (min-width: 400px) and (max-width: 600px){
+	@media only screen and (min-width: 200px) and (max-width:400px){
+		width: 170px;
+		left: 45px;
+		//background yellow
+	}
+	@media only screen and (min-device-width: 481px) and (max-device-width: 1024px){
+		width: 400px;
+		left: 65px;
+	}
+	@media only screen and (min-width: 401px) and (max-width: 600px){
 		width: 325px;
 		left: 55px;
 	}
@@ -198,10 +271,11 @@ body
 	}	
 }
 
-#content
+.content
 {
 	display: block;
-	background: cyan;
+	overflow: hidden;
+
 	margin-left: 25px;
 	width:400px;
 	height:450px;
@@ -209,13 +283,25 @@ body
 	top:50%;
 	left: 50%;
 	transform:translate(-50%,-50%);
-	overflow: hidden;
 	z-index: 3;
-	@media only screen and (min-width: 400px) and (max-width: 600px)
+	cursor: pointer;
+	@media only screen and (min-width: 200px) and (max-width:400px)
+	{
+		width:150px;	
+		left: 42%;
+		transform:translate(-50%,-50%);
+		//background red
+	}
+	@media only screen and (min-device-width: 481px) and (max-device-width: 1024px){
+		width: 350px;
+		left: 43%;
+		transform:translate(-50%,-50%);
+	}
+	@media only screen and (min-width: 401px) and (max-width: 600px)
 	{
 		width:280px;	
 		left: 42%;
-		
+		transform:translate(-50%,-50%);
 	}
 	@media only screen and (min-width: 601px) and (max-width: 700px)
 	{
@@ -231,6 +317,24 @@ body
 	}
 	
 }
+
+#ctext
+{
+	width: 100%;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	color: #eee;
+	bottom:0;
+	left:0;
+	z-index: 3;
+	height: 25%;
+	padding-top: 10%;
+	font-family:SourceSans-Light;
+	letter-spacing: 110%;
+	font-size: 1.2em;
+	text-align: center;
+}
+
 
 #wrap footer
 {
@@ -248,7 +352,10 @@ body
 #wrap header
 {
 	position: absolute;
-	@media only screen and (min-width: 400px) and (max-width: 600px){
+	@media only screen and (max-device-width: 400px){
+		font-size: 1.0em;
+	}
+	@media only screen and (min-width: 401px) and (max-width: 600px){
 		font-size: 1.2em;
 	}
 	@media only screen and (min-width: 601px) and (max-width: 700px){
@@ -272,4 +379,10 @@ body
 	src: url(SourceSansPro-Regular.ttf);
 	font-family:SourceSans-Regular;
 
+}
+
+@font-face
+{
+	src: url(SourceSansPro-Light.ttf);
+	font-family:SourceSans-Light;
 }

@@ -5,7 +5,48 @@
 
 $(document).ready(function(){
 
-//make up and down buttons darker on mousedown, add a class
-
+	$('.content').hide();
+	$('.content').first().addClass('active');
+	$('.active').show();
 	
+	$('#uparrow').click(function(){
+		$('.active').addClass('oldActive');
+		$('.active').removeClass('active');
+
+		if($('.oldActive').is(':first-child'))
+			{
+				$('.content').last().addClass('active');
+			}
+			else
+			{
+				$('.oldActive').prev().addClass('active');
+			}
+			
+		$('.content').removeClass('oldActive');
+		$('.content').hide();
+		$('.active').show();
+
+	});
+
+
+	$('#downarrow').click(function(){
+		$('.active').addClass('oldActive');
+		$('.active').removeClass('active');
+
+		if($('.oldActive').is(':last-child'))
+			{
+				$('.content').first().addClass('active');
+			}
+			else
+			{
+				$('.oldActive').next().addClass('active');
+			}
+			
+		$('.content').removeClass('oldActive');
+		$('.content').hide();
+		$('.active').show();
+
+	});
+
+
 });
